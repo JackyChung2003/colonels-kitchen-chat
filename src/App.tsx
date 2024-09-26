@@ -8,7 +8,10 @@ import Home from "./containers/home";
 // import Post from "./containers/post";
 // import AboutUs from "./containers/aboutUs";
 import AboutUs from "./containers/aboutus";
+import Login from "./containers/Login";
 // import NotFound from "./containers/notFound";
+// import AskTheColonel from "./containers/home";
+import ColonelAi from "./containers/colonelAi";
 
 // Add navbar component here using routers
 function App() {
@@ -39,6 +42,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Home />} />
           <Route path="/contact" element={<AboutUs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/ColonelAi" element={<ColonelAi />} />
         </Routes>
       </main>
   </div>

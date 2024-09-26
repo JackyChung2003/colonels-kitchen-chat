@@ -4,7 +4,8 @@ nav {
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 100;
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
   width: 100%;
   background: black;
 }

@@ -14,6 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggle }) => {
   return (
     <nav>
       <Link to="/" className="link">
+        {/* Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="icon-tabler icon-tabler-brand-edge"

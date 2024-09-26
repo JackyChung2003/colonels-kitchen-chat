@@ -22,4 +22,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* Color variables */
+  --primary-color: #fffffe;
+  --secondary-color: #72757e;
+  --tertiary-color: #2cb67d;
+  --highlight-color: #7f5af0;
+  --accent-color: #fbbc05;
+  --text-color: #333333;
+  --stroke-color: #010101;
+  --background-color: #242629;
+  --headline-color: #fffffe;
+  --subheadline-color: #94a1b2;
+
+  /* Card color variables */
+  --card-background-color: #16161a; /* Card background color */
+  --card-header-color: #fffffe; /* Card header color */
+  --card-paragraph-color: #94a1b2; /* Card paragraph color */
+
+  /* Font size variables */
+  --font-small: 12px;
+  --font-medium: 16px;
+  --font-large: 24px;
+
+  /* Spacing variables */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+
+  /* Border radius variables */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 30px;
+
+  /* Box shadow variables */
+  --box-shadow-light: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
