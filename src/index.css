@@ -59,3 +59,25 @@
   --box-shadow-light: 0px 2px 5px rgba(0, 0, 0, 0.1);
   --box-shadow-medium: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Ensures that the whole page fills the viewport height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* border: 1px solid Blue; */
+}
+
+/* Content wrapper handles the flex layout between sidebar and main content */
+.content-wrapper {
+  display: flex;
+  flex-grow: 1; /* Takes up the remaining space after the navbar */
+  overflow: hidden; /* Ensures no unwanted overflow */
+}
+
+/* Main content will fill the rest of the screen */
+.main-content {
+  flex-grow: 1; /* Ensures it uses the remaining space in the content-wrapper */
+  background-color: #f0f0f0; /* Adjust the background color as needed */
+  overflow-y: auto; /* Allows scrolling within the main content */
+}

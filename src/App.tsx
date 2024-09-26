@@ -34,7 +34,7 @@ function App() {
     // </>
     <div className="App">
       {/* <NavBar /> */}
-      <Navbar toggle={toggle} />
+      {/* <Navbar toggle={toggle} />
       <Sidebar isopen={isopen} toggle={toggle} />
       <main>
         <Routes>
@@ -45,7 +45,24 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/ColonelAi" element={<ColonelAi />} />
         </Routes>
-      </main>
+      </main> */}
+
+      <div className="app-container">
+      <Navbar toggle={toggle} />
+      <div className="content-wrapper">
+        <Sidebar isopen={isopen} toggle={toggle} />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/services" element={<Home />} />
+            <Route path="/contact" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/ColonelAi" element={<ColonelAi />} />
+          </Routes>
+        </main>
+      </div>
+    </div>
   </div>
   );
 }
