@@ -4,14 +4,32 @@
   flex-direction: column;
   /* min-height: 100vh; */
   /* background-color: #1a1a1a; */
-  color: #f0f0f0;
+  /* color: #f0f0f0; */
   /* border: 1px solid red; */
   justify-content: center;
   align-items: center; /* Vertical centering */
   /* height: 100vh; */
   height: 100%;
-  background-color: #333; /* Optional background color */
   margin: 0;
+  background-image: url("../assets/Images/Background.jpeg"); /* Replace with your image path */
+  background-size: cover; /* Ensures the background covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Avoids repeating the image */
+  z-index: 1; /* Ensures the content stays above the background */
+  position: relative; /* Allows positioning of pseudo-elements */
+}
+
+/* Pseudo-element for blur and dark overlay */
+.colonel-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Blur effect */
+  z-index: -1; /* Ensures the overlay is behind the content */
 }
 
 .colonel-main-content {
