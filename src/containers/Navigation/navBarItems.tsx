@@ -4,20 +4,20 @@ const navBarItems = [
       link: "/ColonelAi",
     },
     {
-      title: "Services",
-      link: "/Services",
+      title: "Leaderboard",
+      link: "/Leaderboard",
     },
     {
-      title: "Contact",
-      link: "/contact",
+      title: "Community",
+      link: "/Community",
     },
     {
-      title: "Sign Up",
-      link: "/signup",
+      title: "Events",
+      link: "/Events",
     },
     {
-      title: "Log In",
-      link: "/login",
+      title: "FAQ",
+      link: "/faq",
     },
   ];
   
