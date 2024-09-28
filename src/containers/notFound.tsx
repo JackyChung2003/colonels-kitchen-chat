@@ -324,22 +324,44 @@
 
 import React, { useEffect, useState } from 'react';
 import './NotFound.css';
-import Temp from '../assets/Images/chicken-recipi-1.webp';
 import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import colonelMessages from './Prompt/colonelMessages';
+// import Profile404_1 from '../assets/Images/404-profile/404-profile-1';
+import Profile404_1 from '../assets/Images/404-profile/404-profile-1.webp';
+import Profile404_2 from '../assets/Images/404-profile/404-profile-2.webp';
+import Profile404_3 from '../assets/Images/404-profile/404-profile-3.webp';
+import Profile404_4 from '../assets/Images/404-profile/404-profile-4.webp';
+import Profile404_5 from '../assets/Images/404-profile/404-profile-5.webp';
+import Profile404_6 from '../assets/Images/404-profile/404-profile-6.webp';
+import Profile404_7 from '../assets/Images/404-profile/404-profile-7.webp';
+import Profile404_8 from '../assets/Images/404-profile/404-profile-8.webp';
+import Profile404_9 from '../assets/Images/404-profile/404-profile-9.webp';
+import Profile404_10 from '../assets/Images/404-profile/404-profile-10.webp';
+import Profile404_11 from '../assets/Images/404-profile/404-profile-11.webp';
 
-// const messages = [
-//   "Looks like you found me, but this shop’s not open yet!",
-//   "This page ain't ready, just like undercooked chicken!",
-//   "Guess I’m not serving anything here yet!",
-//   "You’re not supposed to be here, partner!",
-// ];
+// Define profile images for each type of response
+const profiles = {
+  general: [
+    Profile404_1,
+    Profile404_2,
+    Profile404_3,
+    Profile404_4,
+    Profile404_5,
+    Profile404_6,
+    Profile404_7,
+    Profile404_8,
+    Profile404_9,
+    Profile404_10,
+    Profile404_11,
+  ],
+};
 
 export const NotFound: React.FC = () => {
   const [torchActive, setTorchActive] = useState(false);
   const [colonelPosition, setColonelPosition] = useState({ top: '50%', left: '50%' });
   const [colonelMessage, setColonelMessage] = useState('');
   const [hasEscaped, setHasEscaped] = useState(false); // To track if Colonel has escaped
+  const [currentProfile, setCurrentProfile] = useState<string>(profiles.general[0]); // Store current profile
   const navigate = useNavigate(); // Create a navigate function
 
   useEffect(() => {
@@ -352,6 +374,7 @@ export const NotFound: React.FC = () => {
       const newLeft = `${Math.floor(Math.random() * 70) + 10}%`; // Left 10% to 80%
       setColonelPosition({ top: newTop, left: newLeft });
       setColonelMessage(colonelMessages[Math.floor(Math.random() * colonelMessages.length)]); // Set initial message
+      setCurrentProfile(getRandomGeneralProfile()); // Set initial random profile
     };
 
     moveColonelOnLoad(); // Initial move
@@ -387,6 +410,7 @@ export const NotFound: React.FC = () => {
           setTimeout(() => {
             moveColonel(); // Move Colonel after a 2-second delay
             setColonelMessage(colonelMessages[Math.floor(Math.random() * colonelMessages.length)]); // Update the message
+            setCurrentProfile(getRandomGeneralProfile()); // Update the profile
             console.log('Colonel is moving!');
 
             // Reset the escape flag after 2 seconds to allow another escape
@@ -418,6 +442,12 @@ export const NotFound: React.FC = () => {
     navigate('/'); // Navigate to the home route ("/")
   };
 
+  // Function to get a random general profile
+  const getRandomGeneralProfile = () => {
+    const randomIndex = Math.floor(Math.random() * profiles.general.length);
+    return profiles.general[randomIndex];
+  };
+
   return (
     <div className="not-found">
       <div className="text">
@@ -446,7 +476,7 @@ export const NotFound: React.FC = () => {
         style={{ top: colonelPosition.top, left: colonelPosition.left }}
       >
         {colonelMessage && <p className="colonel-message">{colonelMessage}</p>}
-        <img src={Temp} alt="Colonel Sanders" />
+        <img src={currentProfile} alt="Colonel Sanders" />
       </div>
 
       {/* Back to Home Button */}

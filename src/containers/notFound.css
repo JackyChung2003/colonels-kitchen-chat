@@ -176,3 +176,68 @@
   box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
     0 0 100px #008cff;
 }
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .text svg {
+    width: 700px;
+  }
+  .torch {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .text svg {
+    width: 500px;
+  }
+  .torch {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text svg {
+    width: 400px;
+  }
+
+  .colonel {
+    display: none;
+  }
+
+  .text h3 {
+    font-size: 1.5em;
+  }
+
+  .home-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Hide the torch on mobile and make the screen fully dark */
+  .torch {
+    display: none;
+  }
+
+  .not-found::before {
+    background: rgba(0, 0, 0, 1); /* Fully dark background for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .text svg {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h3 {
+    font-size: 1.5em;
+  }
+  .home-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
