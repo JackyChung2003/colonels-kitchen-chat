@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "./containers/Navigation/HorizontalNavBar";
 import Sidebar from "./containers/Navigation/SideNavBar";
 import ColonelAi from "./containers/colonelAi";

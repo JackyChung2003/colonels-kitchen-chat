@@ -1,5 +1,5 @@
 // MessageDisplay.tsx
-import React from 'react';
+// import React from 'react';
 
 export function formatContent(content: string) {
   // Replace **bold** with <strong>, _italic_ with <em>, and \n\n with <br /><br />
