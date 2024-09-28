@@ -12,6 +12,7 @@ import Login from "./containers/Login";
 // import NotFound from "./containers/notFound";
 // import AskTheColonel from "./containers/home";
 import ColonelAi from "./containers/colonelAi";
+import NotFound from "./containers/notFound";
 
 // Add navbar component here using routers
 function App() {
@@ -53,12 +54,14 @@ function App() {
         <Sidebar isopen={isopen} toggle={toggle} />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<ColonelAi />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/services" element={<Home />} />
             <Route path="/contact" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/ColonelAi" element={<ColonelAi />} />
+            <Route path="/NotFound" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>

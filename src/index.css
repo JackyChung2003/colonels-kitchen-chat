@@ -78,6 +78,6 @@
 /* Main content will fill the rest of the screen */
 .main-content {
   flex-grow: 1; /* Ensures it uses the remaining space in the content-wrapper */
-  background-color: #f0f0f0; /* Adjust the background color as needed */
+  background-color: var(--background-color);
   overflow-y: auto; /* Allows scrolling within the main content */
 }

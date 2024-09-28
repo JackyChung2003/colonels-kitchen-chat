@@ -19,6 +19,10 @@ const navBarItems = [
       title: "FAQ",
       link: "/faq",
     },
+    {
+      title: "NotFound",
+      link: "/NotFound",
+    },
   ];
   
 export default navBarItems;

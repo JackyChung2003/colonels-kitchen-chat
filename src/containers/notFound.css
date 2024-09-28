@@ -1,0 +1,178 @@
+/* neon text z-index 5 */
+/* torch z-index 4 */
+/* colonel z-index 3 */
+/* text z-index 2 */
+/* not found z-index 1 */
+/* not found overlay z-index 0 */
+.not-found {
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  /* background: url("https://wallpapercave.com/wp/6SLzBEY.jpg") no-repeat left top; */
+  background-image: url("../assets/Images/404-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.not-found::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay with 70% opacity */
+  z-index: 0; /* Ensure it sits below all other content */
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  /* padding: 20px; */
+  transition: color 0.5s ease-in-out; /* Smooth transition for torch reveal */
+  /* z-index: 5; */
+  /* border: 1px solid yellow; */
+  gap: 40px;
+}
+
+.text svg {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  stroke: #fff;
+  width: 900px;
+
+  animation-name: animate;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 5;
+}
+
+@keyframes animate {
+  0% {
+    filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff)
+      drop-shadow(0px 0px 10px #ff80b3) drop-shadow(0px 0px 30px #ff4d94)
+      drop-shadow(0px 0px 50px #ff0066);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff)
+      drop-shadow(0px 0px 15px #ff80b3) drop-shadow(0px 0px 40px #ff4d94)
+      drop-shadow(0px 0px 60px #ff0066);
+  }
+}
+
+.text h3 {
+  color: white;
+  margin-left: 30px;
+  font-size: 2em;
+  text-shadow: -5px 5px 0px rgba(0, 0, 0, 0.7);
+  /* margin-top: -40px; */
+  font-family: monospace;
+  font-weight: bold;
+  /* border: 1px solid yellow; */
+  z-index: 2;
+}
+
+.torch {
+  margin: -300px 0 0 -300px;
+  width: 400px;
+  height: 400px;
+  /* width: 1400px;
+  height: 1400px; */
+  box-shadow: 0 0 0 9999em #000000f7;
+  opacity: 1;
+  border-radius: 50%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0);
+  /* background: rgba(0, 0, 0, 0.3); */
+  z-index: 4;
+}
+
+.torch:after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  box-shadow: inset 0 0 40px 2px #000, 0 0 20px 4px rgba(13, 13, 10, 0.2);
+}
+
+.colonel {
+  position: absolute;
+  transition: top 0.5s ease, left 0.5s ease;
+  /* border: 1px solid red; */
+  width: 150px;
+  /* height: 150px; */
+  /* z-index: 0; */
+  z-index: 3;
+}
+
+.colonel img {
+  width: 150px;
+  height: auto;
+}
+
+.colonel-message {
+  color: white;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 5px black;
+  margin-top: 10px;
+  text-align: center;
+
+  background-color: #242323;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+  border: 2px solid #cccbba;
+  margin-bottom: 10px;
+}
+
+.home-button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  background-color: #ff4500;
+}
+
+.home-button:hover {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
