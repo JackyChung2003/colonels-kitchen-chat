@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './NotFound.css';
+import './notFound.css';
 import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import colonelMessages from './Prompt/colonelMessages';
 import Profile404_1 from '../assets/Images/404-profile/404-profile-1.webp';
