@@ -1,6 +1,5 @@
 import React from "react";
 import "./index.css";
-// import navbarItems from "../NavbarItems";
 import navBarItems from "../navBarItems";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";

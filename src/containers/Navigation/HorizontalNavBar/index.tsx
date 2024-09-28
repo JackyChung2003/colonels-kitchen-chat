@@ -1,7 +1,5 @@
 import React from "react";
 import "./index.css";
-// import navbarItems from "../NavbarItems";
-// import navBarItems from "../navBarItems";
 import navBarItems from "../navBarItems";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ClipLoader } from "react-spinners";
 import './ColonelAi.css';
-// import ChickenRecipeProfile from '../assets/Images/chickenrecipi.webp';
 import ChickenRecipeProfile1 from '../assets/Images/chicken-recipi-1.webp';
 import ChickenRecipeProfile2 from '../assets/Images/chicken-recipi-2.webp';
 import ChickenRecipeProfile3 from '../assets/Images/chicken-recipi-3.webp';
@@ -21,43 +20,34 @@ import suggestionPrompts from './Prompt/suggestionPrompt';
 import recipeSuggestion from './Prompt/recipeSuggestion';
 import wisdomSuggestions from './Prompt/wisdomSuggestions';
 import userProfile from '../assets/Images/user-profile.webp';
-// import MessageDisplay from '../utils/MessageDisplay';
 import MessageDisplay from '../utils/MessageDisplay';
 import { handlePlayChickenSound } from '../utils/playChickenSound';
 
 // Define profile images for each type of response
 const profiles = {
   general: [
-    ChickenRecipeProfile1,     // First general avatar
-    ChickenRecipeProfile2,    // Second general avatar
-    ChickenRecipeProfile3,    // Third general avatar
-    ChickenRecipeProfile4,    // Fourth general avatar
-    ChickenRecipeProfile5,    // Fifth general avatar
-    ChickenRecipeProfile6,    // Sixth general avatar
-    ChickenRecipeProfile7,    // Seventh general avatar
-    ChickenRecipeProfile8,    // Eighth general avatar
+    ChickenRecipeProfile1,
+    ChickenRecipeProfile2,
+    ChickenRecipeProfile3,
+    ChickenRecipeProfile4,
+    ChickenRecipeProfile5,
+    ChickenRecipeProfile6,
+    ChickenRecipeProfile7,
+    ChickenRecipeProfile8,
     ChickenRecipeProfile9,    
     ChickenRecipeProfile10
   ],
-  wisdom: ChickenHidden,    // Wisdom avatar
-  recipe: ChickenCooking,    // Recipe avatar
-  chickenSound: ChickenChasing, // Fun avatar
-  user: userProfile       // User avatar
+  wisdom: ChickenHidden,
+  recipe: ChickenCooking,
+  chickenSound: ChickenChasing,
+  user: userProfile
 };
 
+const nodeId = import.meta.env.VITE_GAIANET_NODE_ID || process.env.REACT_APP_GAIANET_NODE_ID;
 
-// const suggestionPrompts = [
-//   "What's your secret to the perfect fried chicken?",
-//   "Do you have any tips for cooking the best mashed potatoes?",
-//   "What’s your favorite memory of starting KFC?",
-//   "How do you balance the 11 herbs and spices?",
-//   "What's the most important lesson in life you've learned?",
-// ];
-
-
-// const apiUrl = 'https://0xb4020f2d82c62b376ed7aa8b105c84b9efb9aff3.us.gaianet.network/v1/chat/completions';
-// const apiUrl = 'https://api.openai.com/v1/engines/davinci/completions';
-const apiUrl = 'https://llama.us.gaianet.network/v1/chat/completions';
+const apiUrl = nodeId 
+  ? `https://${nodeId}.us.gaianet.network/v1/chat/completions`
+  : 'https://llama.us.gaianet.network/v1/chat/completions';
 
 function ColonelAi() {
   const [messages, setMessages] = useState<{ role: string; content: string; profile: string; isLoading?: boolean }[]>([]);
@@ -144,15 +134,6 @@ function ColonelAi() {
     }
   }, [messages]);
 
-  // const handlePlayChickenSound = () => {
-  //   const audio = new Audio('/chicken-cluck.mp3');
-  //   audio.play();
-  //   setMessages((prev) => [
-  //     ...prev,
-  //     { role: 'assistant', content: "Chicken sound played!", profile: profiles.chickenSound }
-  //   ]);
-  // };
-
   const handleDailyWisdom = () => {
     const wisdom = wisdomSuggestions[Math.floor(Math.random() * wisdomSuggestions.length)];
     setMessages((prev) => [
@@ -185,22 +166,22 @@ function ColonelAi() {
           <div className='suggestions-top-section'>
             <h2 className="suggestions-title">Suggested Topics</h2>
             <button onClick={handleRefreshPrompts} className="refresh-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-repeat"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
-                ></path>
-              </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="bi bi-arrow-repeat"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+              ></path>
+            </svg>
             </button>
           </div>
           <div className="suggestions">
@@ -216,8 +197,7 @@ function ColonelAi() {
             ))}
           </div>
         </div>
-        
-        {/* <div className='chat-container'>  
+        <div className='chat-container'>  
           <div className="chat-box scroll-area">
             {messages.map((message, index) => (
               <div key={index} className={`message ${message.role === 'user' ? 'user-message' : 'assistant-message'}`}>
@@ -232,45 +212,18 @@ function ColonelAi() {
                       <span>Thinking...</span>
                     </div>
                   ) : (
-                    message.content
+                    // Use MessageDisplay for formatted content
+                    <MessageDisplay content={message.content} />
                   )}
                 </div>
-
+                
                 {message.role === 'user' && (
                   <img src={message.profile} alt="User profile" className="profile-img right" />
                 )}
               </div>
             ))}
           </div>
-        </div> */}
-        <div className='chat-container'>  
-  <div className="chat-box scroll-area">
-    {messages.map((message, index) => (
-      <div key={index} className={`message ${message.role === 'user' ? 'user-message' : 'assistant-message'}`}>
-        {message.role === 'assistant' && (
-          <img src={message.profile} alt="AI profile" className="profile-img left" />
-        )}
-
-        <div className={`message-content ${message.role}`}>
-          {message.isLoading ? (
-            <div className="loading">
-              <ClipLoader size={24} color="#ffffff" />
-              <span>Thinking...</span>
-            </div>
-          ) : (
-            // Use MessageDisplay for formatted content
-            <MessageDisplay content={message.content} />
-          )}
         </div>
-
-        {message.role === 'user' && (
-          <img src={message.profile} alt="User profile" className="profile-img right" />
-        )}
-      </div>
-    ))}
-  </div>
-</div>
-
           <div className='colonel-bottom-section'>
             <div className="more-section">
               {/* <h2>More Fun with the Colonel</h2> */}

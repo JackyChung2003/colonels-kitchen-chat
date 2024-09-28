@@ -7,12 +7,9 @@
 .not-found {
   height: 100%;
   display: flex;
-  /* flex-direction: column; */
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
-  /* background: url("https://wallpapercave.com/wp/6SLzBEY.jpg") no-repeat left top; */
   background-image: url("../assets/Images/404-bg.jpg");
   background-size: cover;
   overflow: hidden;
@@ -37,22 +34,13 @@
   justify-content: center;
   align-items: center;
   border: 1px solid red;
-  /* padding: 20px; */
   transition: color 0.5s ease-in-out; /* Smooth transition for torch reveal */
-  /* z-index: 5; */
-  /* border: 1px solid yellow; */
   gap: 40px;
 }
 
 .text svg {
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-
   stroke: #fff;
   width: 900px;
-
   animation-name: animate;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
@@ -79,10 +67,8 @@
   margin-left: 30px;
   font-size: 2em;
   text-shadow: -5px 5px 0px rgba(0, 0, 0, 0.7);
-  /* margin-top: -40px; */
   font-family: monospace;
   font-weight: bold;
-  /* border: 1px solid yellow; */
   z-index: 2;
 }
 
@@ -90,14 +76,11 @@
   margin: -300px 0 0 -300px;
   width: 400px;
   height: 400px;
-  /* width: 1400px;
-  height: 1400px; */
   box-shadow: 0 0 0 9999em #000000f7;
   opacity: 1;
   border-radius: 50%;
   position: fixed;
   background: rgba(0, 0, 0, 0);
-  /* background: rgba(0, 0, 0, 0.3); */
   z-index: 4;
 }
 
@@ -115,10 +98,7 @@
 .colonel {
   position: absolute;
   transition: top 0.5s ease, left 0.5s ease;
-  /* border: 1px solid red; */
   width: 150px;
-  /* height: 150px; */
-  /* z-index: 0; */
   z-index: 3;
 }
 

@@ -2,21 +2,16 @@
 .colonel-container {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
-  /* background-color: #1a1a1a; */
-  /* color: #f0f0f0; */
-  /* border: 1px solid red; */
   justify-content: center;
-  align-items: center; /* Vertical centering */
-  /* height: 100vh; */
+  align-items: center;
   height: 100%;
   margin: 0;
-  background-image: url("../assets/Images/Background.jpeg"); /* Replace with your image path */
-  background-size: cover; /* Ensures the background covers the entire container */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Avoids repeating the image */
-  z-index: 1; /* Ensures the content stays above the background */
-  position: relative; /* Allows positioning of pseudo-elements */
+  background-image: url("../assets/Images/Background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
 }
 
 /* Pseudo-element for blur and dark overlay */
@@ -29,22 +24,20 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
   backdrop-filter: blur(8px); /* Blur effect */
-  z-index: -1; /* Ensures the overlay is behind the content */
+  z-index: -1;
 }
 
 .colonel-main-content {
   width: 100%;
-  max-width: 1000px; /* Adjust the max-width to fit the content */
+  max-width: 1000px;
   padding: 15px;
-  background-color: #444; /* Optional container background */
+  background-color: #444;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for better look */
-  color: white; /* Text color */
-  /* border: 1px solid green; */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 /* Header styling */
@@ -69,11 +62,10 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  /* border: 1px solid blue; */
 }
+
 /* Suggestions container */
 .suggestions-container {
-  /* margin-bottom: 30px; */
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -81,7 +73,6 @@ h1 {
   background-color: #2c2c2c;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
-  /* max-width: 80%; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -90,8 +81,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 20px; */
 }
+
 /* Title styling */
 .suggestions-title {
   font-size: 1.5rem;
@@ -119,7 +110,6 @@ h1 {
   border: none;
   margin-bottom: 10px;
   margin-left: 20px;
-  /* border: 1px solid white; */
 }
 
 .refresh-btn:hover {
@@ -130,9 +120,7 @@ h1 {
   display: inline;
   width: 1.3rem;
   height: 1.3rem;
-  /* margin-right: 0.75rem; */
   color: white;
-  /* border: 1px solid white; */
 }
 
 .refresh-btn:focus svg {
@@ -153,16 +141,14 @@ h1 {
 .suggestions {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* This makes the buttons wrap into new rows */
-  gap: 15px; /* Space between buttons */
-  /* border: 1px solid #444; */
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 /* Button styling */
 .suggestion-btn {
-  flex: 1 1 250px; /* This sets the base size for the button */
-  /* max-width: 250px;  */
-  min-width: 200px; /* Minimum width to ensure they don't get too small */
+  flex: 1 1 250px;
+  min-width: 200px;
   padding: 12px 25px;
   background-color: #444;
   border: none;
@@ -176,16 +162,16 @@ h1 {
 
 /* Hover effect */
 .suggestion-btn:hover {
-  background-color: #ffcc00; /* Highlight the button with a lighter color */
+  background-color: #ffcc00;
   color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow on hover */
-  transform: translateY(-3px); /* Gives a slight 'lift' effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
 }
 
 /* Active/pressed state */
 .suggestion-btn:active {
   background-color: #ff9933;
-  transform: translateY(0); /* Brings the button back down when clicked */
+  transform: translateY(0);
   box-shadow: none;
 }
 
@@ -193,9 +179,7 @@ h1 {
 .chat-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* This ensures it takes up the remaining space */
-  /* overflow: hidden;  */
-  /* border: 1px solid red; */
+  flex-grow: 1;
   height: 100%;
 }
 
@@ -204,15 +188,9 @@ h1 {
   background-color: #292929;
   padding: 20px;
   border-radius: 8px;
-  /* max-height: 400px; */
-  overflow-y: auto; /* Enable vertical scrolling */
-  /* border: 1px solid #444; */
-  /* flex-grow: 1; */
-  flex-grow: 1; /* Takes up remaining space in its container */
-  /* max-height: 400px; */
+  overflow-y: auto;
+  flex-grow: 1;
   height: 35dvh;
-  /* height: 100%; */
-  /* max-height: 20%; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -272,7 +250,7 @@ h1 {
   background-color: #2b2b2b;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  gap: 15px; /* Spacing between sections */
+  gap: 15px;
 }
 
 /* More section buttons */
@@ -280,7 +258,7 @@ h1 {
   display: flex;
   gap: 10px;
   justify-content: center;
-  flex-wrap: wrap; /* Ensure buttons wrap if needed */
+  flex-wrap: wrap;
 }
 
 /* Button styles */
@@ -292,7 +270,7 @@ h1 {
   font-size: 1rem;
   color: #fff;
   transition: all 0.3s ease;
-  min-width: 160px; /* Ensure buttons are equally sized */
+  min-width: 160px;
 }
 
 .more-btn:hover {
@@ -397,7 +375,6 @@ h1 {
   }
 
   .suggestion-btn {
-    /* min-width: 150px; */
     padding: 8px 10px;
     font-size: 0.8rem;
   }
