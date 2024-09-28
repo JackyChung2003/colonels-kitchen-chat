@@ -422,7 +422,6 @@ h1 {
     gap: 10px;
     justify-content: center;
     flex-wrap: nowrap;
-    border: 1px solid red;
   }
 
   .more-btn {
