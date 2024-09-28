@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ClipLoader } from "react-spinners";
-import './ColonelAi.css';
+import './colonelAi.css';
 import ChickenRecipeProfile1 from '../assets/Images/chicken-recipi-1.webp';
 import ChickenRecipeProfile2 from '../assets/Images/chicken-recipi-2.webp';
 import ChickenRecipeProfile3 from '../assets/Images/chicken-recipi-3.webp';
