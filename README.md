@@ -1,102 +1,91 @@
-# React + TailwindCSS + React Router DOM Starter Template
+<div align="center">
+  
+  ![banner](./public/colonel-banner.png)
 
-This template provides a great starting point for building modern web applications using React with TypeScript, TailwindCSS for styling, and React Router DOM for handling client-side routing. Additionally, it leverages Vite, a fast and lightweight development build tool, to optimize the development experience.
+# Colonel's Kitchen Chat(AKA **KFC Legends AI Twin**)
 
-## Table of Contents
+### An AI-powered chatbot running on a GaiaNet AI node, featuring a lively and interactive Colonel Sanders twin—experience personalized cooking tips, legendary recipes, and timeless wisdom, all through the power of decentralized AI technology!
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-- [Routing](#routing)
-- [Linting and Formatting](#linting-and-formatting)
+  <p align="center">
+    <a href="#project-overview">Project Overview</a> •
+    <a href="#project-demo">Project Demo</a> •
+    <a href="#installation">Installation</a> •
+    <a href="#future-enhancements">Future Enhancements</a> •
+    <a href="#license">License</a>
+  </p>
+</div>
 
-### Features
+## Project Overview
 
-- **React**: A popular JavaScript library for building user interfaces.
-- **TypeScript**: A strict syntactical superset of JavaScript that adds static typing.
-- **TailwindCSS**: A utility-first CSS framework for rapid UI development.
-- **React Router DOM**: Handle client-side routing with ease.
-- **Vite**: A fast and efficient development build tool for modern web applications.
+**Colonel's Kitchen Chat** (also known as the **KFC Legends AI Twin**) delivers an immersive and interactive experience. Imagine chatting with an AI-powered Colonel Sanders to discover his world-famous recipes, gain inspiration from his entrepreneurial journey, and explore fun and engaging interactions along the way.
 
-### Prerequisites
+### Key Features:
 
-Before getting started, make sure you have one of the following software installed:
+- **Real-Time Conversations**: Engage directly with an AI version of Colonel Sanders. Ask him about his secret recipes, cooking techniques, and receive wisdom from his journey to success.
+- **Personalized Cooking Tips & Legendary Recipes**: Get direct access to KFC-inspired recipes and cooking advice, offering a new culinary adventure with every interaction.
+- **Daily Wisdom**: The Colonel shares his life lessons, mixing humor with wisdom to motivate and inspire you daily.
 
-- Node.js: https://nodejs.org/en/
-- Yarn: https://yarnpkg.com/
+## Project Demo
 
-I'll be using npm in this tutorial, but you can use yarn if you prefer.
+### Watch the Video or Try the Live Demo
 
-### Getting Started
+[![Colonel's Kitchen Chat Video Demo](https://img.youtube.com/vi/sMddHJ5waag/maxresdefault.jpg)](https://www.youtube.com/watch?v=sMddHJ5waag)
 
-The default project name is `react-tailwind-router-template`. To clone the repository with a different project name, run the following command:
+[Watch the demo](https://www.youtube.com/watch?v=sMddHJ5waag) or [try the live version](https://jackychung2003.github.io/colonels-kitchen-chat/) of **Colonel's Kitchen Chat**.
+
+### Screenshots
+
+- **Chat Interface**  
+  ![Chat Interface](./public/Page-1.gif)
+
+- **404 Page Torchlight Effect**  
+  ![404 Torch Cursor](./public/Page-404.gif)
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/mafzaldev/react-tailwind-router-template "folder name here without quotes"
-
+git clone https://github.com/JackyChung2003/colonels-kitchen-chat.git
+cd colonels-kitchen-chat
 ```
 
-Once the repository has been cloned, navigate to the project directory and change the project name in the `package.json` file (according to the folder name you provided):
-
-```json
-{
-  "name": "react-tailwind-router-template",
-  ...
-}
-```
-
-Next, install the dependencies:
+### Install Dependencies
 
 ```bash
-cd "folder name here without quotes"
 npm install
 ```
 
-There are some commits in the git history that are not relevant to the template. To remove them, run the following command:
+### Environment Setup
+
+To connect the app to the GaiaNet AI node or other AI services, set up the necessary environment variables.
+
+Create a `.env` file in the root directory with the following content:
 
 ```bash
-bash clear_commits.sh
+VITE_GAIANET_NODE_ID=your-gaianet-node-id
 ```
 
-Finally, start the development server:
+### Run the Application
 
 ```bash
 npm run dev
 ```
 
-### Routing
+The app will now run locally, and you can access it in your browser at `http://localhost:5173/colonels-kitchen-chat/`.
 
-This template uses React Router DOM for handling client-side routing. The `src/pages` folder will contain the routes for the pages. For example, the `home` page file is located at `src/pages/home.tsx`. The `App.tsx` file contains the routes for the pages. Create a new route by adding a new file to the `src/pages` folder and adding a new `Route` component to the `App.tsx` file.
+### Future Enhancements
 
-```tsx
-import { Routes, Route } from "react-router-dom";
+Looking to the future, the following features are planned:
 
-import Home from "./pages/home";
-import Post from "./pages/post";
-import AboutUs from "./pages/aboutus";
+- **Gamification**: Add leaderboards and achievements for users who engage with the Colonel the most.
+- **Community Features**: Allow users to share recipes, rate them, and connect with other food lovers.
+- **Special Events**: Host monthly themed events and challenges to keep the experience fresh and exciting.
 
-function App() {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/post/:id" element={<Post />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        {/* Add more routes as needed */}
-      </Routes>
-    </>
-  );
-}
-```
+## License
 
-### Linting and Formatting
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for more details.
 
-This project comes pre-configured with ESLint and Prettier to maintain code consistency and adhere to best practices. The linting and formatting rules are defined in the `.eslintrc.js` file.
-
-### Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request if you have any questions or suggestions.
-
-### License
-
-MIT © [Muhammad Afzal](https://github.com/mafzaldev)
+GPL-3.0 © [Jacky Chung](https://github.com/JackyChung2003)
